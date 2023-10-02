@@ -6,7 +6,8 @@
   "scripts": {
     "start-client": "cd client && npm start",
     "start-server": "cd server && npm start",
-    "start": "npm run start-client"
+    "build": "cd Client && npm run build",
+    "start": "concurrently \"npm run start-client\" \"npm run start-server\""
   },
   "keywords": [],
   "author": "Kai Ponder",
@@ -15,5 +16,3 @@
     "concurrently": "^8.2.1"
   }
 }
-
-
