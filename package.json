@@ -1,0 +1,19 @@
+{
+  "name": "userauth",
+  "version": "1.0.0",
+  "description": "Testing zone.",
+  "main": "index.js",
+  "scripts": {
+    "start-client": "cd client && npm start",
+    "start-server": "cd server && npm start",
+    "start": "npm run start-client"
+  },
+  "keywords": [],
+  "author": "Kai Ponder",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.1"
+  }
+}
+
+
