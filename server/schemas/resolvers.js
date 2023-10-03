@@ -53,6 +53,7 @@ const resolvers = {
       try {
         const user = await User.create(args);
         const token = signToken(user);
+        console.log("Token: ", token);
         return { token, user };
       } catch (err) {
         console.log(

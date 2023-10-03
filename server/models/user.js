@@ -1,25 +1,35 @@
 const { Schema, model } = require("mongoose");
 const bcrypt = require("bcrypt");
 
-const userSchema = new Schema({
-  username: {
-    type: String,
-    unique: true,
-    required: "Username is Required",
-    trim: true,
+const userSchema = new Schema(
+  {
+    username: {
+      type: String,
+      unique: true,
+      required: "Username is Required",
+      trim: true,
+    },
+    email: {
+      type: String,
+      unique: true,
+      required: "Email is Required",
+      match: [/.+@.+\..+/, "Please enter a valid e-mail address"],
+    },
+    password: {
+      type: String,
+      required: "Password is Required",
+      minlength: 5,
+    },
+    token: {
+      type: String,
+    },
   },
-  email: {
-    type: String,
-    unique: true,
-    required: "Email is Required",
-    match: [/.+@.+\..+/, "Please enter a valid e-mail address"],
-  },
-  password: {
-    type: String,
-    required: "Password is Required",
-    minlength: 5,
-  },
-});
+  {
+    toJSON: {
+      virtuals: true,
+    },
+  }
+);
 
 // set up pre-save middleware to create password
 userSchema.pre("save", async function (next) {
