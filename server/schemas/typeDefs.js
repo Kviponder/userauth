@@ -13,12 +13,6 @@ const typeDefs = gql`
     Users: [User]
   }
 
-  input UserInput {
-    username: String!
-    email: String!
-    password: String!
-  }
-
   type Auth {
     token: ID!
     user: User
