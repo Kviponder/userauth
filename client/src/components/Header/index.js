@@ -13,7 +13,19 @@ function Header() {
         <Row>
           <Col>
             <h1>Header</h1>
-            <Button onClick={handleLogout}>Logout</Button>
+            {Auth.loggedIn() ? (
+              <Button onClick={handleLogout}>Logout</Button>
+            ) : (
+              <div className="button-cont">
+                <Button className="headButt" href="/signUp">
+                  Sign Up
+                </Button>
+
+                <Button className="headButt" href="/">
+                  Login
+                </Button>
+              </div>
+            )}
           </Col>
         </Row>
       </Container>
