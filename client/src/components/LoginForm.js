@@ -35,7 +35,7 @@ const Login = () => {
             <div className="form-group">
               <label htmlFor="email">Email address:</label>
               <input
-                placeholder=""
+                placeholder="saucey@marinara.pasta"
                 name="email"
                 type="email"
                 id="email"
@@ -45,7 +45,7 @@ const Login = () => {
             <div className="form-group">
               <label htmlFor="pwd">Password :</label>
               <input
-                placeholder=""
+                placeholder="pAssWOrd"
                 name="password"
                 type="password"
                 id="pwd"
