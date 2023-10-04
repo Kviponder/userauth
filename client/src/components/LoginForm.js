@@ -15,7 +15,7 @@ const Login = () => {
         variables: { email, password },
       });
       const token = data.login.token;
-      localStorage.setItem("tokenID", token);
+      localStorage.setItem("id_token", token);
       window.location.replace("/dashboard");
       console.log("Login successful:", data.login.token);
     } catch (err) {
@@ -23,7 +23,7 @@ const Login = () => {
     }
   };
   return (
-    <Container>
+    <Container className="box">
       <Row>
         <Col>
           <h1>Login</h1>
@@ -43,7 +43,7 @@ const Login = () => {
               />
             </div>
             <div className="form-group">
-              <label htmlFor="pwd">Password:</label>
+              <label htmlFor="pwd">Password :</label>
               <input
                 placeholder=""
                 name="password"

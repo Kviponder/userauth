@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { ApolloProvider } from "@apollo/client";
 import client from "./index";
+import "./App.css";
+
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
